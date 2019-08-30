@@ -1,5 +1,6 @@
 ## Best Practices Learnt in Productionizing Machine Learning Models
 
+
 [NewVantage survey](https://newvantage.com/wp-content/uploads/2018/12/Big-Data-Executive-Survey-2019-Findings.pdf) shows that 77% of businesses report that "business adoption" of big data and AI initiatives continues to represent a big challenge for business, deriving business values from data science and creating better customer experiences at scale remain elusive. Why is that? Because only through production can a deployed data science solution actually serve customers, and unfortunately, the path to machine learning model production remains difficult for many organizations.
 
 Therefore in this article, we will go over how Toyota Connected designed and implemented our Machine Learning Model production strategy, through collaborations between two teams Mobility and Labs, to deliver world-class experiences for our customers. We wanted to share some of the things we've learnt how to productionize, accelerate and deploy machine learning models, hopefully you will find them useful for you and your organization.
@@ -11,6 +12,8 @@ Table of Contents
 - Speed up Python
 - Containers vs Serverless
 - Results
+
+![Production](production.jpg)
 
 ### 1.Options to implement Machine Learning models
 
