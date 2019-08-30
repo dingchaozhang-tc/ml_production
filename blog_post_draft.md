@@ -50,6 +50,9 @@ There’s a couple of points we learnt and follow when looking to speed Python u
   - If we see any type of math, there’s a good chance we can replace it with some built-in Numpy function
 Both of these points are really focused on replace non-vectorized Python code with optimized, vectorized, low-level C code.
 
+- Parrelization
+Our goal is to enable our machine learning application to process and make predictions on hundreds of requests and events per second, and the event volume wil only get larger and larger when more and more passenger cars with embedded connectivity are on road. To reduce the overall processing time for parallel processing is a mode of operation where the task is executed simultaneously in multiple processors in the same server, and with library like gunicorn, we can further optimize the performance of the machine learning if served from a Flask API, using the 3 types of concurrency provided by gunicorn: workers, threads, pseudo-threads.
+
 - Use builtin functions and libraries
 Builtin functions like sum, max, any, map, etc are implemented in C. They are very efficient and well tested
 Guido's Python Patterns - An Optimization Anecdote is a great read:
@@ -63,7 +66,7 @@ It is often the case in programming that simplest is fastest. In this day and ag
 With Python’s readability meant that we are able to zero in on the bottleneck in their code in no time, and provide faster response to our customers in C runtime speed using optimized Python Numpy implementations.
 
 ### 4. Containers vs Serverless
-
+![containers](container.png)
 Serverless/FaaS(Function as a Service) computing and containers are both architectures that reduce overhead for cloud-hosted web applications and more flexibility than applications hosted on traditional servers or virtual machines, they both make it very easy to build API for machine learning models, but they differ in several important ways.
 
 In order to better advise our team in that respect, we have set up a small and dedicated research spike to experiment. To begin, we have established a roadmap for learning the requirements and caveats of deploying machine
@@ -81,7 +84,7 @@ It is difficult to test Serverless web applications because the backend environm
  - Latency: 
 Because servers sit cold until they’re pinged by an application, there is some latency involved in executing tasks. Thus, serverless may not be an ideal solution for applications where speed is paramount, such as e-commerce and search sites.
 
-![containers](container.png)
+
 
 ### 5. Results
 TBD
