@@ -93,6 +93,7 @@ In short, containers are best used for complex, long-running applications where 
 
 
 ### 5. Results
+![customers](customer.jpg)
 Incorporating the above best practices helped us to quickly accelerate and transformed the prototyping machine learning model, which only handles one request at a time and takes multiple seconds to run, to a fast, low-latency auto-scaling solution that is able to handle 300 requests per second, and it completes data processing, feature engineering and model prediction all in just as little as 15 milli-seconds.
 
 Data Science should be about creating solutions that has impact. Notebooks, research papers, visualizations just aren’t going to be satisfactory any more. Production and deployment take hard work in a cross-functional team effort, which it’s not an easy path. But, it’s totally worth it, the codebases we built, the framework we constructed, and the collaboration pattern we learnt are all transferrable and applicable to future machine learning solutions, without the need to re-create wheels. More importantly, we are building ever better services and make them available to our customers at a faster pace.
