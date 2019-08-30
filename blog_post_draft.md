@@ -1,6 +1,5 @@
 ## Best Practices Learnt in Productionizing Machine Learning Models
-
-
+![Production](production.jpg)
 [NewVantage survey](https://newvantage.com/wp-content/uploads/2018/12/Big-Data-Executive-Survey-2019-Findings.pdf) shows that 77% of businesses report that "business adoption" of big data and AI initiatives continues to represent a big challenge for business, deriving business values from data science and creating better customer experiences at scale remain elusive. Why is that? Because only through production can a deployed data science solution actually serve customers, and unfortunately, the path to machine learning model production remains difficult for many organizations.
 
 Therefore in this article, we will go over how Toyota Connected designed and implemented our Machine Learning Model production strategy, through collaborations between two teams Mobility and Labs, to deliver world-class experiences for our customers. We wanted to share some of the things we've learnt how to productionize, accelerate and deploy machine learning models, hopefully you will find them useful for you and your organization.
@@ -13,10 +12,10 @@ Table of Contents
 - Containers vs Serverless
 - Results
 
-![Production](production.jpg)
+
 
 ### 1.Options to implement Machine Learning models
-
+![team work](team-brainstorming.jpg)
 At Toyota Connected, machine learning production is a team activity. Data scientists, data engineers, dev-ops  work closely to understand how the prototype code would fit into existing software architecture. Team members in this cross-functional squad may have a completely different stack of programming languages, divergent comprehension of machine learning, architectures, etc to lay the groundwork for collaborations, there are usually the following options that organization pursue.
 
 The first option is rewriting the whole model in the language that the software engineering folks work.
@@ -37,6 +36,7 @@ In short, notebooks break a lot of software engineering paradigms, because they 
 
 
 ### 3. Speed up Python
+![speedup](speedup.png)
 
 We constantly look for ways to optimize our machine learning code, decrease execution time, and ensure that our programs respond as quickly as possible to our customers. Python is our machine learning development language and we would like to share our development practices to optimize Python efficiency and response time to produce minimal latency for our customer experiences using our applications.
 
@@ -80,6 +80,8 @@ It is difficult to test Serverless web applications because the backend environm
 
  - Latency: 
 Because servers sit cold until they’re pinged by an application, there is some latency involved in executing tasks. Thus, serverless may not be an ideal solution for applications where speed is paramount, such as e-commerce and search sites.
+
+![containers](container.png)
 
 ### 5. Results
 TBD
