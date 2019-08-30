@@ -53,7 +53,7 @@ Guido's Python Patterns - An Optimization Anecdote is a great read:
 
 If you feel the need for speed, go for built-in functions - you can't beat a loop written in C. Check the library manual for a built-in function that does what you want.
 
--  Keep Python code small and light
+- Keep Python code small and light
 
 It is often the case in programming that simplest is fastest. In this day and age performance is critical and it’s especially important to keep your Python code as compact as possible to reduce latency and speed things up. One article provides some organizing questions that are worth asking in the development stage: “Do we really need this module?”, “Why are we using this framework? Is it worth the overhead?”, “Can we do this in a simpler way?”
 
@@ -66,16 +66,16 @@ Serverless/FaaS(Function as a Service) computing and containers are both archite
 In order to better advise our team in that respect, we have set up a small and dedicated research spike to experiment. To begin, we have established a roadmap for learning the requirements and caveats of deploying machine
 learning models into multiple ML pipelines and infrastructures.  One of the biggest challenges is that serving a model(accepting requests and returning predictions) is only part of the problem. There is a long list of adjacent requirements. These include, for example:
 
-- Preprocessing input before predictions
+ - Preprocessing input before predictions: 
 Applications that perform analysis of very large datasets won’t be a good fit for a serverless architecture, as serverless functions have time limits (typically five minutes) before they are terminated.
 
-- Scalability
+ - Scalability:
 Serverless allows your app to be elastic. It can automatically scale up to accommodate many concurrent users and scale back down when traffic subsides. This characteristic increases the performance of your app while saving you money.
 
-- Testing
+ - Testing:
 It is difficult to test Serverless web applications because the backend environment is hard to replicate on a local environment. In contrast, containers run the same no matter where they are deployed, making it relatively simple to test a container-based application before deploying it to production.
 
-- Latency
+ - Latency: 
 Because servers sit cold until they’re pinged by an application, there is some latency involved in executing tasks. Thus, serverless may not be an ideal solution for applications where speed is paramount, such as e-commerce and search sites.
 
 ### 5. Results
