@@ -13,7 +13,6 @@ Table of Contents
 - Results
 
 
-
 ### 1.Options to implement Machine Learning models
 ![team work](team-brainstorming.jpg)
 At Toyota Connected, machine learning production is a team activity. Data scientists, data engineers, dev-ops work closely to understand how the prototype code would fit into existing software architecture. Team members in this cross-functional squad may have a completely different stack of programming languages, divergent comprehension of machine learning, architectures, etc to lay the groundwork for collaborations, there are usually the following options that organization pursue.
@@ -90,7 +89,7 @@ Migrating existing applications is easier to do with containers than it is serve
 - Cost:
 There is a somewhat misleading and oversimplified claim you might hear a lot is that because containers need a long-running hosting location, they are more expensive to run than serverless functions. In reality the context and usage of the application should be studied thoroughly to estimate the cost, many of the machine learning applications Toyota Connected deployed, as the connected vehicle IoT nature, is forecasted to be invoked constantly, for one of our popular machine-learning powered safety application, it is about 90% less expensive to deploy it in a Kubertenets-based container solution, compared to using serverless.
 
-In short, containers are best used for complex, long-running applications where you need a high level of control over your environment, and 
+In short, containers are best used for complex, long-running applications where you need a high level of control over your environment, and it can be producing a huge cost saving in the meantime.
 
 
 ### 5. Results
