@@ -45,9 +45,9 @@ There’s a couple of points we learnt and follow when looking to speed Python u
 
 - Vectorization:
 
- Vectorized operations in Numpy are mapped to highly optimized C code, making them much faster than their standard Python or compiled language counterparts like Java. We used Numpy to speed up the processing and prediction operations of our machine learning model by hundreds of fold.
-    - If there’s a for-loop over an array, there’s a good chance we can replace it with some built-in Numpy function
-    - If we see any type of math, there’s a good chance we can replace it with some built-in Numpy function
+ Vectorized operations in Numpy are mapped to highly optimized C code, making them much faster than their standard Python or compiled language counterparts like Java. We used Numpy to speed up the processing and prediction operations of our machine learning model by hundreds of fold. Two simple rules to share:
+   1. If there’s a for-loop over an array, there’s a good chance we can replace it with some built-in Numpy function
+   2. If we see any type of math, there’s a good chance we can replace it with some built-in Numpy function
 Both of these points are focused on replacing non-vectorized Python code with optimized, vectorized, low-level C code.
 
 - Parallelization: 
