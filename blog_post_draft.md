@@ -43,24 +43,27 @@ Python is known to have an easy syntax that makes learning much more tolerable, 
 
 There’s a couple of points we learnt and follow when looking to speed Python up:
 
-- Vectorization
+- Vectorization:
+
  Vectorized operations in Numpy are mapped to highly optimized C code, making them much faster than their standard Python or compiled language counterparts like Java. We used Numpy to speed up the processing and prediction operations of our machine learning model by hundreds of fold.
-  - If there’s a for-loop over an array, there’s a good chance we can replace it with some built-in Numpy function
-  - If we see any type of math, there’s a good chance we can replace it with some built-in Numpy function
+    - If there’s a for-loop over an array, there’s a good chance we can replace it with some built-in Numpy function
+    - If we see any type of math, there’s a good chance we can replace it with some built-in Numpy function
 Both of these points are focused on replacing non-vectorized Python code with optimized, vectorized, low-level C code.
 
-- Parallelization
+- Parallelization: 
+
 Our goal is to enable our machine learning application to process and make predictions on hundreds of requests and events per second, and the event volume will only get larger and larger when more and more passenger cars with embedded connectivity are on road. To reduce the overall processing time for parallel processing is a mode of operation where the task is executed simultaneously on multiple processors in the same server, and with library like gunicorn, we can further optimize the performance of the machine learning if served from a Flask API, using the 3 types of concurrency provided by gunicorn: workers, threads, pseudo-threads.
 
-- Use built-in functions and libraries
+- Use built-in functions and libraries:
+
 Builtin functions like sum, max, any, map, etc are implemented in C. They are very efficient and well tested
 Guido's Python Patterns - An Optimization Anecdote is a great read:
 
 If you feel the need for speed, go for built-in functions - you can't beat a loop written in C. Check the library manual for a built-in function that does what you want.
 
-- Keep Python code small and light
+- Keep Python code small and light:
 
-It is often the case in programming that simplest is fastest. In this day and age performance is critical and it’s especially important to keep your Python code as compact as possible to reduce latency and speed things up. One article provides some organizing questions that are worth asking in the development stage: “Do we really need this module?”, “Why are we using this framework? Is it worth the overhead?”, “Can we do this in a simpler way?”
+It is often the case in programming that simplest is fastest. In this day and age performance is critical and it’s especially important to keep your Python code as compact as possible to reduce latency and speed things up. Following are good organizing questions that are worth asking in the development stage: “Do we really need this module?”, “Why are we using this framework? Is it worth the overhead?”, “Can we do this in a simpler way?”
 
 With Python’s readability meant that we can zero in on the bottleneck in their code in no time, and provide faster response to our customers in C runtime speed using optimized Python Numpy implementations.
 
